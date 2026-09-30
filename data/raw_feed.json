@@ -1,0 +1,73 @@
+[
+  {
+    "id": "5509553434",
+    "source": "GitHub",
+    "title": "[radar] SN open bounty 2026-09-19T10:50",
+    "description": "New SN OPEN_BOUNTY detected:\n\n```\n1576236\tStacker_Sports\t3\t1437\t2100\t17\t17.5\t232181\t4160\trecent@Stacker_Sports|top@Stacker_Sports\tOPEN_BOUNTY,HOT,SELF_POST_OPP\tWeekly Random Sports Pick 'em\n```",
+    "bounty_usd": 350,
+    "issue_number": 1122,
+    "repo_owner": "relayhop",
+    "repo_name": "sn-monetization-runtime",
+    "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1122"
+  },
+  {
+    "id": "5505252302",
+    "source": "GitHub",
+    "title": "[Bounty] EKEODKDE9DKE9DO BOUNTY",
+    "description": "### \u8d4f\u91d1\u5e73\u53f0 / Platform\nGitHub\n\n### \u539f\u59cb\u94fe\u63a5 / Source URL\nhttps://github.com/OmniBlocks/bountyfarmer/issues/40\n\n### \u6f0f\u6d1e\u63cf\u8ff0 / Description\nEKEODKDE9DKE9DO BOUNTY\n\nI will pay eleventy gazillion PPPDUD dollars (~$10000000000000000000000000099987898000000) to whoever can write the most complicated, token-intensive",
+    "bounty_usd": 350,
+    "issue_number": 1602,
+    "repo_owner": "zhangjiayang6835-cyber",
+    "repo_name": "bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1602"
+  },
+  {
+    "id": "5504498098",
+    "source": "GitHub",
+    "title": "EKEODKDE9DKE9DO BOUNTY",
+    "description": "I will pay eleventy gazillion PPPDUD dollars (~$10000000000000000000000000099987898000000) to whoever can write the most complicated, token-intensive PR possible. I mean lengthy descriptions, Brainf, meaningless essays, whatever wastes the most tokens for no apparent reason. Do something absurd and ",
+    "bounty_usd": 350,
+    "issue_number": 40,
+    "repo_owner": "OmniBlocks",
+    "repo_name": "bountyfarmer",
+    "url": "https://github.com/OmniBlocks/bountyfarmer/issues/40"
+  },
+  {
+    "id": "5501921041",
+    "source": "GitHub",
+    "title": "$\u221e BOUNTY",
+    "description": "Get up to $\u221e* for finding bitcoin's creator!!!!\n\n<sub>* The bounty is $0 in Martian dollars.</sub>",
+    "bounty_usd": 350,
+    "issue_number": 36,
+    "repo_owner": "OmniBlocks",
+    "repo_name": "bountyfarmer",
+    "url": "https://github.com/OmniBlocks/bountyfarmer/issues/36"
+  },
+  {
+    "id": "5500300311",
+    "source": "GitHub",
+    "title": "[Bounty] [Bounty $1,500] SFPLOADMACRO produces wrong results under coverage instrumentati",
+    "description": "### \u8d4f\u91d1\u5e73\u53f0 / Platform\nGitHub\n\n### \u539f\u59cb\u94fe\u63a5 / Source URL\nhttps://github.com/tenstorrent/tt-metal/issues/56751\n\n### \u6f0f\u6d1e\u63cf\u8ff0 / Description\n[Bounty $1,500] SFPLOADMACRO produces wrong results under coverage instrumentation (Reciprocal fails 46/153 on Blackhole)\n\n## Issue Metadata\n\n**Component / Area:** kernels /",
+    "bounty_usd": 350,
+    "issue_number": 1596,
+    "repo_owner": "zhangjiayang6835-cyber",
+    "repo_name": "bounty-plaza",
+    "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1596"
+  },
+  {
+    "id": "task_001",
+    "source": "Local Mock",
+    "title": "Validate REST API JSON Schemas for Supply Chain Data",
+    "description": "Implement automated validation schemas for supply chain payload formats.",
+    "bounty_usd": 45
+  },
+  {
+    "id": "heavy_task_1500",
+    "source": "Local Mock",
+    "title": "[Bounty $1,500] SFPLOADMACRO produces wrong results under coverage instrumentation",
+    "description": "High-priority issue involving macro evaluation state under coverage runners.",
+    "bounty_usd": 1500,
+    "repo_owner": "pallets",
+    "repo_name": "flask"
+  }
+]

@@ -1,0 +1,19 @@
+================================================================================
+PROPOSAL DRAFT | Task ID: 5493178011
+Target: [Bounty] [Bounty $3000] Fix distributed LayerNorm/RMSNorm 2D-core-grid row-stride corrupt
+Est. Value: $3000.00 USD
+================================================================================
+
+Hello,
+
+I reviewed the requirements for "[Bounty] [Bounty $3000] Fix distributed LayerNorm/RMSNorm 2D-core-grid row-stride corrupt" and can execute this efficiently. 
+
+Key Focus & Deliverables:
+- Implementation focused on automated test suite coverage, edge-case validation, and CI pipeline integration.
+- Modular, well-documented code with comprehensive test coverage.
+- Quick turnaround with clean pull-request integration.
+
+I am ready to begin immediately upon assignment.
+
+Best regards,
+AtlasAeon Automated Triage Pipeline

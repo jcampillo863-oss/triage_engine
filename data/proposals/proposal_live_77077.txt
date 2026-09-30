@@ -1,0 +1,17 @@
+====================================================================
+ATLASAEON AUTOMATED TECHNICAL PROPOSAL
+Task ID: live_77077
+Generated At: 2026-09-22 20:54:57
+Source: GitHub Pallets Commits
+====================================================================
+
+PROBLEM ANALYSIS:
+Target Issue: fix docs ref
+
+PROPOSED RESOLUTION PIPELINE:
+1. Isolated environment setup in workspace/task_live_77077.
+2. Targeted fix applied to affected modules via AST/Rule-based patcher.
+3. Local verification via automated test execution (unittest/pytest).
+4. Automated PR submission upon verification pass.
+
+====================================================================

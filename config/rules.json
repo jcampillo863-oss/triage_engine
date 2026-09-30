@@ -1,0 +1,11 @@
+{
+  "min_bounty_usd": 40.0,
+  "payout_profiles": {
+    "account_name": "AtlasAeon",
+    "paypal_email": "jcampillo863@gmail.com",
+    "preferred_currency": "AUD"
+  },
+  "excluded_keywords": [
+    "telegram bot", "pumping", "uniswap fork", "anti-bot", "captcha"
+  ]
+}

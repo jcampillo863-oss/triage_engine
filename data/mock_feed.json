@@ -1,0 +1,29 @@
+[
+  {
+    "id": "task_001",
+    "title": "Validate REST API JSON Schemas for Supply Chain Data",
+    "category": "software testing",
+    "bounty_usd": 45.00,
+    "payout_method": "paypal",
+    "description": "Need a human-in-the-loop to review and validate 5 JSON schema files against production endpoints.",
+    "url": "https://example.com/bounty/001"
+  },
+  {
+    "id": "task_002",
+    "title": "Take 4 In-Person Photos of Local Retail Store",
+    "category": "fieldwork",
+    "bounty_usd": 12.00,
+    "payout_method": "fiat_stripe",
+    "description": "Visit a store in Sydney and take photos of product displays.",
+    "url": "https://example.com/bounty/002"
+  },
+  {
+    "id": "task_003",
+    "title": "Write PyTest Suite for Python Data Parser",
+    "category": "qa",
+    "bounty_usd": 65.00,
+    "payout_method": "paypal",
+    "description": "Create unit tests with 85%+ coverage for a dynamic data ingestion module.",
+    "url": "https://example.com/bounty/003"
+  }
+]
