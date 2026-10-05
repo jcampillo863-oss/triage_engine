@@ -1,4 +1,5 @@
 import os
+import pytest
 import requests
 from requests.auth import HTTPBasicAuth
 
@@ -14,9 +15,10 @@ def test_paypal_handshake():
     client_secret = os.getenv("PAYPAL_CLIENT_SECRET")
 
     if not client_id or not client_secret:
-        print("[ERROR] PAYPAL_CLIENT_ID or PAYPAL_CLIENT_SECRET environment variables are missing.")
-        print("Set them in your terminal via: $env:PAYPAL_CLIENT_ID='your_id'")
-        return False
+        pytest.fail(
+            "[ERROR] PAYPAL_CLIENT_ID or PAYPAL_CLIENT_SECRET environment variables are missing.\n"
+            "Set them in your terminal via: $env:PAYPAL_CLIENT_ID='your_id'"
+        )
 
     auth_url = f"{base_url}/v1/oauth2/token"
     headers = {
@@ -25,7 +27,7 @@ def test_paypal_handshake():
     }
     data = {"grant_type": "client_credentials"}
 
-    print(f"[INIT] Attempting OAuth handshake with PayPal ({mode} mode)...")
+    print(f"\n[INIT] Attempting OAuth handshake with PayPal ({mode} mode)...")
     try:
         response = requests.post(
             auth_url,
@@ -35,20 +37,18 @@ def test_paypal_handshake():
             timeout=10
         )
 
-        if response.status_code == 200:
-            token_data = response.json()
-            print("[SUCCESS] API Handshake established successfully!")
-            print(f"Token Type: {token_data.get('token_type')}")
-            print(f"Expires In: {token_data.get('expires_in')} seconds")
-            return True
-        else:
-            print(f"[FAILED] Handshake rejected. Status Code: {response.status_code}")
-            print(f"Response: {response.text}")
-            return False
+        assert response.status_code == 200, (
+            f"[FAILED] Handshake rejected. Status Code: {response.status_code}\n"
+            f"Response: {response.text}"
+        )
 
-    except Exception as e:
-        print(f"[ERROR] Connection failed due to network or timeout error: {e}")
-        return False
+        token_data = response.json()
+        print("[SUCCESS] API Handshake established successfully!")
+        print(f"Token Type: {token_data.get('token_type')}")
+        print(f"Expires In: {token_data.get('expires_in')} seconds")
+
+    except requests.RequestException as e:
+        pytest.fail(f"[ERROR] Connection failed due to network or timeout error: {e}")
 
 if __name__ == "__main__":
     test_paypal_handshake()

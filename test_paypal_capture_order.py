@@ -1,8 +1,11 @@
+"""Retired manual direct-order tool; canonical capture tests use mocks and durable claims."""
+__test__ = False
 import os
 import requests
 from requests.auth import HTTPBasicAuth
 
 def capture_order():
+    raise RuntimeError("Retired direct order capture; use reviewed canonical settlement capture")
     mode = os.getenv("PAYPAL_MODE", "sandbox")
     if mode == "live":
         base_url = "https://api-m.paypal.com"
@@ -12,8 +15,8 @@ def capture_order():
     client_id = os.getenv("PAYPAL_CLIENT_ID")
     client_secret = os.getenv("PAYPAL_CLIENT_SECRET")
     
-    # The Order ID we generated earlier
-    order_id = "7L161944CL895091D"
+    # Historical provider binding removed; original evidence remains outside source.
+    order_id = None  # Retired direct-order path has no bound transaction.
 
     if not client_id or not client_secret:
         print("[ERROR] PAYPAL_CLIENT_ID or PAYPAL_CLIENT_SECRET environment variables are missing.")

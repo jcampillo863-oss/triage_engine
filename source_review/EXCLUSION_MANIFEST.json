@@ -1,0 +1,5519 @@
+[
+  {
+    "path": ".env",
+    "category": 5,
+    "reason": "Local credentials/environment or machine-specific endpoint configuration; retain locally, never stage",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": ".pytest_cache/",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "__pycache__/",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "__pycache__/git_adapter.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "__pycache__/patcher.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "__pycache__/settlement_webhook.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": true,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "config/endpoints.json",
+    "category": 5,
+    "reason": "Local credentials/environment or machine-specific endpoint configuration; retain locally, never stage",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/backups/pre-eligibility-008-20261004T160313827751Z.db",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/backups/pre-eligibility-008-20261004T160313827751Z.db-shm",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/backups/pre-eligibility-008-20261004T160313827751Z.db-wal",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/certificates/cert_heavy_task_99999.json",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/certificates/cert_live_22340.json",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/certificates/cert_live_54386.json",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/certificates/cert_live_60175.json",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/certificates/cert_live_67117.json",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/certificates/cert_live_7347.json",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/certificates/cert_live_80304.json",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/ledger.json",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": true,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/matched_jobs.json",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": true,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_5500300311.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_5501921041.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_5504498098.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_5505252302.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_5509553434.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_heavy_task_1500.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_11199.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_13013.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_13475.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_15108.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_15865.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_16494.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_16745.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_16929.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_17455.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_17532.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_18631.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_18914.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_19670.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_202.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_22340.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_22659.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_22865.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_22902.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_24267.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_24923.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_2513.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_2604.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_27207.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_28372.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_30445.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_31183.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_31778.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_31866.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_32058.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_33005.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_35757.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_3595.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_36656.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_36908.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_37848.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_38597.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_38822.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_39036.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_39688.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_41029.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_41572.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_42190.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_42259.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_42766.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_4337.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_43811.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_45002.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_4522.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_45291.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_4560.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_46110.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_47230.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_48550.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_4910.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_49102.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_49549.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_50119.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_51899.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_53102.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_54065.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_54211.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_5462.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_54808.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_55866.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_55900.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_56529.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_56676.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_56914.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_57124.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_5749.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_58332.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_58964.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_59104.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_60175.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_60221.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_61450.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_62890.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_63901.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_64120.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_64238.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_65081.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_65319.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_66362.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_66804.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_67116.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_67990.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_68102.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_69440.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_70112.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_70841.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_71381.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_71890.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_72020.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_72080.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_72223.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_72301.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_72315.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_73410.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_74520.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_75119.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_76727.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_76960.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_77077.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_77457.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_78001.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_79299.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_80142.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_80304.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_81110.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_81483.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_81533.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_8212.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_84633.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_86254.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_9100.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_91801.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_9359.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_93844.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_94134.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_94862.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_96192.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_mock_docs_99.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_live_mock_route_98.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/patches/patch_task_001.patch",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_5476627612.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_5485922862.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_5493178011.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_5500300311.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_5501921041.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_5504498098.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_5505252302.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_5509553434.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_heavy_task_1500.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_10185.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_11199.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_11218.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_11428.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_11430.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_13013.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_13295.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_13419.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_13475.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_13846.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_14047.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_14538.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_14597.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_15037.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_15108.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_15236.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_15865.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_16187.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_16494.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_16745.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_16929.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_16943.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_16965.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_1721.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_17304.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_17455.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_17532.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_17856.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_18631.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_18914.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_19121.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_19531.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_1966.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_19670.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_1991.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_202.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_20327.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_21432.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_22340.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_22394.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_22659.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_22865.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_22888.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_22902.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_23189.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_23856.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_24267.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_24923.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_2513.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_25588.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_25636.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_2604.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_26139.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_26191.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_26256.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_26314.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_26326.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_27207.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_27430.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_27436.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_27516.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_27606.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_28372.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_28445.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_29474.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_29521.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_30013.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_30445.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_31043.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_31055.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_31183.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_31191.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_3147.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_31778.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_31866.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_32058.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_32311.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_33005.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_33150.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_33339.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_33712.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_33778.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_3399.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_34284.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_34432.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_34695.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_34840.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_3499.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_35647.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_35757.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_3595.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_36497.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_36529.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_36656.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_36908.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_37826.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_37848.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_37850.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_38597.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_38785.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_39036.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_39303.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_39373.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_39688.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_3992.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_40336.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_41008.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_41572.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_42259.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_42323.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_42418.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_42727.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_42766.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_4297.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_42974.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_43244.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_4337.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_43839.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_43914.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_44030.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_44417.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_44632.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_44836.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_4522.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_45291.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_4560.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_47004.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_47084.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_47285.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_48273.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_4891.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_4910.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_49549.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_51235.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_51407.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_51657.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_51899.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_51981.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_5219.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_52280.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_52398.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_53129.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_54065.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_54352.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_54386.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_54547.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_5462.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_54808.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_55671.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_55866.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_5650.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_56508.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_56526.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_56529.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_56676.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_56914.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_5749.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_57903.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_58964.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_59324.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_59537.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_59715.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_59973.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_60175.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_60378.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_60748.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_61881.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_625.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_62617.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_62697.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_62698.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_62701.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_62987.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_63375.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_64238.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_64358.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_65081.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_65335.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_65344.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_6557.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_65797.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_66004.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_66362.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_67116.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_67151.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_67437.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_67884.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_67977.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_69439.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_70267.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_7052.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_70828.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_70841.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_71381.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_71422.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_71680.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_71799.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_72020.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_72080.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_72223.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_72315.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_72343.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_72650.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_72668.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_72792.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_72830.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_7328.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_7347.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_73647.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_7366.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_74823.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_75149.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_75165.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_75188.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_76201.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_76311.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_76423.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_7666.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_76727.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_76960.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_77077.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_77182.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_77457.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_77819.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_78004.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_78208.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_78856.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_78999.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_79299.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_79631.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_79668.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_79911.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_79934.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_80304.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_80488.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_80587.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_81110.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_81177.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_81483.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_81516.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_81533.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_81824.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_8212.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_82451.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_82970.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_83559.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_83654.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_84633.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_84642.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_8480.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_85054.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_8522.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_85834.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_86254.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_87263.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_87400.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_88102.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_89201.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_89304.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_8933.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_89504.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_89760.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_89777.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_90167.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_90544.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_9100.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_91297.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_91421.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_91801.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_92503.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_93470.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_9359.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_93844.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_94134.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_94596.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_94862.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_95042.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_95082.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_95256.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_95372.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_96192.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_96814.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_97528.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_97756.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_98535.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_99214.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_99547.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_live_99810.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_task_001.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/proposals/proposal_task_003.txt",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/raw_feed.json",
+    "category": 4,
+    "reason": "Historical fetched/mixed opportunity feed, not a curated source fixture; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/settlement.db",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/settlement.db-shm",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/settlement.db-wal",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/test_ledger.json",
+    "category": 4,
+    "reason": "Generated seen-task ledger written by legacy test_harness; reproducible output, retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "data/triage.log",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": true,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "database.db",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "settlement.db",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "src/__pycache__/",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "test_bounty.txt",
+    "category": 4,
+    "reason": "Legacy manual workflow input/artifact; not used by approved canonical regression runner; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "test_trigger.txt",
+    "category": 4,
+    "reason": "Legacy manual workflow input/artifact; not used by approved canonical regression runner; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "venv/",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_5500300311/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_5501921041/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_5504498098/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_5505252302/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_5509553434/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_heavy_task_1500/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_heavy_task_1500/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_11199/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_13013/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_13475/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_15108/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_15865/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_16494/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_16745/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_16745/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_16929/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_17455/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_17455/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_17532/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_18631/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_18914/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_18914/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_19670/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_202/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_22340/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_22659/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_22865/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_22902/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_24267/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_24923/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_2513/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_2513/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_2604/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_2604/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_27207/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_28372/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_30445/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_31183/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_31778/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_31778/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_31866/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_32058/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_33005/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_35757/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_3595/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_36656/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_36908/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_37848/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_37848/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_38597/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_38822/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_39036/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_39688/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_41029/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_41572/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_41572/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_42190/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_42259/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_42766/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_4337/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_43811/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_45002/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_4522/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_45291/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_45291/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_4560/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_46110/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_47230/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_48550/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_4910/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_49102/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_49549/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_50119/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_51899/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_53102/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_54065/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_54065/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_54211/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_5462/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_54808/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_55866/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_55900/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_56529/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_56676/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_56914/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_57124/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_5749/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_58332/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_58964/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_58964/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_59104/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_60175/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_60175/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_60221/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_61450/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_62890/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_63901/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_64120/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_64238/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_65081/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_65319/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_66362/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_66362/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_66804/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_67116/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_67990/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_68102/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_69440/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_70112/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_70841/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_70841/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_71381/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_71381/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_71890/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_72020/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_72020/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_72080/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_72223/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_72301/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_72315/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_72315/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_73410/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_74520/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_75119/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_76727/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_76960/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_77077/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_77457/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_78001/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_79299/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_80142/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_80304/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_81110/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_81110/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_81483/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_81533/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": false,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_8212/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_84633/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_86254/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_9100/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_91801/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_9359/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_93844/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_93844/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_94134/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_94862/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_94862/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_96192/__pycache__/solution.cpython-313.pyc",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_96192/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_mock_docs_99/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_live_mock_route_98/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/task_task_001/solution.py",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  },
+  {
+    "path": "workspace/triage_report.html",
+    "category": 4,
+    "reason": "Generated state, history/evidence, cache, virtual environment or temporary workspace; retain locally",
+    "tracked": true,
+    "changed": false,
+    "untracked_visible": false,
+    "disposition": "exclude_retain_local"
+  }
+]

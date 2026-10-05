@@ -1,0 +1,30 @@
+test_github_acceptance_auth: PASS
+test_github_acceptance_semantics: PASS
+test_work_delivery: PASS
+test_external_acceptance: PASS
+test_acceptance_binding: PASS
+test_payment_authority: PASS
+test_payment_authority_invariants: PASS
+test_canonical_settlement_engine: PASS
+test_canonical_invariants: PASS
+test_canonical_revenue: PASS
+test_revenue_recording: PASS
+test_paypal_adapter: PASS
+test_paypal_capture_service: PASS
+test_paypal_reconciliation_adapter: PASS
+test_paypal_reconciliation_observer: PASS
+test_github_receiver: PASS
+Ran 12 tests in 0.201s
+test_capture_restart_safety: PASS
+Ran 5 tests in 0.041s
+test_settlement_eligibility: PASS
+Ran 33 tests in 0.743s
+test_service_principals: PASS
+Ran 22 tests in 0.867s
+test_paypal_canonical_integration: PASS
+Ran 4 tests in 0.145s
+test_snapshot_source_hygiene: PASS
+Ran 5 tests in 0.012s
+isolated_database_integrity: ok
+isolated_foreign_key_errors: 0
+scripts: 21 failures: 0

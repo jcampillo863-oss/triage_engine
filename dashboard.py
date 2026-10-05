@@ -8,12 +8,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from git_adapter import execute_git_delivery
 from patcher import process_task_patch
 
-# Optional import for external settlement webhook if available
-try:
-    from settlement_webhook import github_webhook
-except ImportError:
-    github_webhook = None
-
+# Legacy financial/webhook routes are retired.
 PORT = 8080
 MATCHED_JOBS_FILE = os.path.join("data", "matched_jobs.json")
 LEDGER_FILE = os.path.join("data", "ledger.json")
@@ -161,92 +156,15 @@ class DashboardHandler(BaseHTTPRequestHandler):
                 self._set_headers("application/json", 500)
                 self.wfile.write(json.dumps({"status": "error", "message": str(e)}).encode("utf-8"))
 
-        elif path == "/api/settle":
-            try:
-                task_id = data.get("task_id")
-                ledger = self.load_ledger()
-                updated = False
-                
-                for entry in ledger:
-                    if entry.get("task_id") == task_id and entry.get("status") != "SETTLED_PAID":
-                        entry["status"] = "SETTLED_PAID"
-                        entry["settled_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                        updated = True
-                
-                if updated:
-                    self.save_ledger(ledger)
-                    self._set_headers("application/json")
-                    self.wfile.write(json.dumps({"status": "success", "message": f"Task [{task_id}] settled and marked PAID!"}).encode("utf-8"))
-                else:
-                    self._set_headers("application/json", 400)
-                    self.wfile.write(json.dumps({"status": "error", "message": "Task not found or already settled."}).encode("utf-8"))
-            except Exception as e:
-                self._set_headers("application/json", 500)
-                self.wfile.write(json.dumps({"status": "error", "message": str(e)}).encode("utf-8"))
-
-        elif path in ("/api/webhook/github", "/webhook/github"):
-            try:
-                if github_webhook:
-                    github_webhook(data)
-                else:
-                    # Built-in fallback settlement handling for GitHub pull requests
-                    action = data.get("action")
-                    pr = data.get("pull_request", {})
-                    if action == "closed" and pr.get("merged", False):
-                        pr_title = pr.get("title", "")
-                        pr_url = pr.get("html_url", "")
-                        match = re.search(r'(live_\d+|heavy_task_\d+|task_\d+)', pr_title)
-                        task_id = match.group(1) if match else None
-                        
-                        if task_id:
-                            print(f"[SUCCESS] Pull Request merged for task: {task_id}")
-                            # Trigger live PayPal settlement, ledger update, and coherence certificate
-                            self.trigger_paypal_settlement(task_id, pr_url, pr)
-
-                self._set_headers("application/json")
-                self.wfile.write(json.dumps({"status": "success", "message": "GitHub webhook processed successfully."}).encode("utf-8"))
-            except Exception as e:
-                print(f"[ERROR] Webhook exception: {e}")
-                self._set_headers("application/json", 500)
-                self.wfile.write(json.dumps({"status": "error", "message": str(e)}).encode("utf-8"))
+        elif path in ("/api/settle", "/api/webhook/github", "/webhook/github"):
+            self._set_headers("application/json", 410)
+            self.wfile.write(b'{"error":"legacy_route_retired"}')
         else:
             self._set_headers("text/plain", 404)
             self.wfile.write(b"404 Not Found")
 
-    def trigger_paypal_settlement(self, task_id, pr_url, pr_payload=None):
-        print(f"[PAYPAL] Initiating live payment capture for Task {task_id}...")
-        
-        client_id = os.getenv("PAYPAL_CLIENT_ID") or os.getenv("AWchAto6KLHfV2Ko4Vq6Aq0ut5QLyjHREgeTpfYEmclPVc7e5X-nirAxz9cUv59m68yoP0Yti9_QalO6")
-        client_secret = os.getenv("PAYPAL_CLIENT_SECRET") or os.getenv("EEM0qYhmg0H2F6G0pc5p-nge9cKhDbGAMzmLrgEp6eh-IFwa-OzCkTBwo99ObvuD8NjNRUM7Z5HYkUX1")
-        base_url = "https://api-m.paypal.com"  # Live production endpoint
-        
-        if not client_id or not client_secret:
-            print("[ERROR] PayPal live credentials missing from environment variables.")
-            return
-
-        try:
-            auth_response = requests.post(
-                f"{base_url}/v1/oauth2/token",
-                auth=(client_id, client_secret),
-                headers={"Accept": "application/json", "Accept-Language": "en_US"},
-                data={"grant_type": "client_credentials"}
-            )
-            
-            if auth_response.status_code != 200:
-                print(f"[ERROR] Failed to obtain PayPal access token: {auth_response.text}")
-                return
-                
-            access_token = auth_response.json().get("access_token")
-            print("[PAYPAL] Live OAuth2 token successfully acquired.")
-
-            print(f"[PAYPAL] Live settlement handshake authorized for {task_id} via PR: {pr_url}")
-
-            print(f"[LEDGER] Marking task {task_id} as SETTLED.")
-            self.update_ledger_status(task_id, new_status="SETTLED")
-            self.generate_coherence_certificate(task_id, pr_payload or {"html_url": pr_url})
-
-        except Exception as e:
-            print(f"[ERROR] Exception during live settlement execution: {e}")
+    def trigger_paypal_settlement(self, *args, **kwargs):
+        raise RuntimeError("Legacy financial shortcut retired")
 
     def update_ledger_status(self, task_id, new_status):
         ledger_path = os.path.join("data", "ledger.json")

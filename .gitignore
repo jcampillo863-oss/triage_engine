@@ -1,0 +1,62 @@
+# Credentials & environment variables
+.env
+
+# Databases & local state
+*.db
+settlement.db
+
+# Certificates & audit logs
+data/certificates/
+
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env.*
+!.env.example
+*.db-wal
+*.db-shm
+data/STOP
+
+# Production-candidate source hygiene (tracked artifacts require explicit human index review).
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.pyo
+*.log
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db-journal
+/data/*.json
+/data/patches/
+/data/proposals/
+/data/backups/
+/data/principal-tests-*/
+/data/eligibility-tests-*/
+/data/history-migration-*/
+/data/canonical-sprint-*/
+/workspace/
+/sandbox/
+/config/endpoints.json
+/test_bounty.txt
+/test_trigger.txt
+# Explicit exception: blank, reviewed configuration template belongs in source.
+!/.env.example
+
+# Explicit reviewed static fixtures; all surrounding generated state remains excluded.
+!/data/mock_feed.json
+# Traverse one reviewed legacy source pair without including its generated workspace neighbors.
+!/workspace/
+/workspace/*
+!/workspace/task_heavy_task_1500/
+/workspace/task_heavy_task_1500/*
+!/workspace/task_heavy_task_1500/sfloadmacro.py
+!/workspace/task_heavy_task_1500/test_sfloadmacro.py
+/data/canonical-integration-*/
