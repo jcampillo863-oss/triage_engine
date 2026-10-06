@@ -11,10 +11,10 @@ class ProposalGenerator:
         title = task.get("title", "")
         bounty = task.get("bounty_usd", 0.0)
         task_id = task.get("id", "unknown")
-        
+
         # Select focus areas based on task content
         text_lower = f"{title} {task.get('description', '')}".lower()
-        
+
         if "pytest" in text_lower or "test" in text_lower or "qa" in text_lower:
             focus = "automated test suite coverage, edge-case validation, and CI pipeline integration"
         elif "schema" in text_lower or "json" in text_lower or "api" in text_lower:
@@ -59,7 +59,7 @@ AtlasAeon Automated Triage Pipeline
             proposal_text = self.generate_proposal(job)
             file_name = f"proposal_{job['id']}.txt"
             file_path = os.path.join(output_dir, file_name)
-            
+
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(proposal_text)
             generated_count += 1

@@ -64,7 +64,7 @@ def execute_git_delivery(task_id, repo_owner="jcampillo863-oss", repo_name="targ
         # Step 3: Check if solution file exists to get SHA (if updating)
         print(f"[+] Writing solution file to branch '{branch_name}'...")
         content_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/solutions/{task_id}_patch.py"
-        
+
         file_sha = None
         try:
             # Check existing file on target branch
@@ -104,7 +104,7 @@ def execute_git_delivery(task_id, repo_owner="jcampillo863-oss", repo_name="targ
             "base": base_branch,
             "body": pr_body
         }
-        
+
         try:
             res_data = make_request(pr_url_endpoint, data=pr_payload, method="POST")
             pr_url = res_data.get("html_url", "N/A")

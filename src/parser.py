@@ -18,7 +18,7 @@ class TaskParser:
             full_num = match.group(1).replace(',', '')
             decimals = match.group(2) if match.group(2) else "0"
             raw_str = f"{full_num}.{decimals}"
-            
+
             try:
                 val = float(raw_str)
                 if 0.0 < val <= 50000.0:
@@ -31,14 +31,14 @@ class TaskParser:
     def normalize_task(self, raw_task):
         task_id = raw_task.get("id") or raw_task.get("number") or raw_task.get("node_id") or "unknown_id"
         title = raw_task.get("title") or raw_task.get("name") or raw_task.get("subject") or ""
-        
+
         description = (
-            raw_task.get("description") or 
-            raw_task.get("body") or 
-            raw_task.get("summary") or 
+            raw_task.get("description") or
+            raw_task.get("body") or
+            raw_task.get("summary") or
             raw_task.get("content") or ""
         )
-        
+
         bounty = 0.0
         for field in ["bounty_usd", "bounty", "reward", "price", "amount", "value"]:
             if field in raw_task and isinstance(raw_task[field], (int, float)):
@@ -49,9 +49,9 @@ class TaskParser:
             bounty = self.extract_bounty_from_text(f"{title} {description}")
 
         payout_method = (
-            raw_task.get("payout_method") or 
-            raw_task.get("payment_type") or 
-            raw_task.get("payout") or 
+            raw_task.get("payout_method") or
+            raw_task.get("payment_type") or
+            raw_task.get("payout") or
             "paypal"
         )
 
@@ -95,14 +95,14 @@ class TaskParser:
         matched = []
         seen_ids = set()
         seen_title_prefixes = set()
-        
+
         for raw in raw_tasks:
             norm_task = self.normalize_task(raw)
-            
+
             # Strip bracketed tags and retain core title characters
             clean_title = re.sub(r'\[.*?\]', '', norm_task["title"]).strip().lower()
             clean_title_key = re.sub(r'[^a-zA-Z0-9]', '', clean_title)
-            
+
             if not clean_title_key:
                 clean_title_key = re.sub(r'[^a-zA-Z0-9]', '', norm_task["title"].lower())
 
@@ -117,5 +117,5 @@ class TaskParser:
                 if title_prefix:
                     seen_title_prefixes.add(title_prefix)
                 matched.append(norm_task)
-                
+
         return matched

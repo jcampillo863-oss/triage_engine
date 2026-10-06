@@ -15,7 +15,7 @@ class RuleBasedPatcher:
         """Generates a candidate source patch file and saves it to data/patches/."""
         task_ws = os.path.join(WORKSPACE_DIR, f"task_{task_id}")
         os.makedirs(task_ws, exist_ok=True)
-        
+
         patch_file = os.path.join(PATCHES_DIR, f"patch_{task_id}.patch")
         dummy_source_file = os.path.join(task_ws, "solution.py")
 
@@ -78,7 +78,7 @@ def execute_task_resolution():
         """Full pipeline: generates candidate patch and runs verification test runner."""
         patch_path, source_file = self.generate_candidate_patch(task_id, title)
         passed, log = self.run_local_verification(source_file)
-        
+
         status_str = "PASSED" if passed else "FAILED"
         print(f"[+] Task [{task_id}] Patch Pipeline complete: {status_str}")
         return {

@@ -16,7 +16,7 @@ python -m venv venv
 
 Bootstrap defaults to this checkout's `data/settlement.db`, independently of the current working directory. An explicit `--db <path>` selects another database; pass the same path to the verifier. Missing parent directories are created. No historical database, `.env`, provider credentials or principal secrets are required. Bootstrap performs no network or financial operations and does not enable capture or the receiver.
 
-The substrate owner remains `db.init_db()`. Bootstrap uses a fixed ordered registry of migrations 001–008; it never executes the divergent legacy `schema.sql`. Migration 007 remains an explicitly verified, historically unregistered schema helper. Expected metadata versions are 1–6 and 8; bootstrap does not fabricate a version-7 application timestamp.
+The substrate owner remains `db.init_db()`. Bootstrap uses a fixed ordered registry of migrations 001–010; it never executes the divergent legacy `schema.sql`. Migration 007 remains an explicitly verified, historically unregistered schema helper. Expected metadata versions are 1–6, 8, 9 and 10; bootstrap does not fabricate a version-7 application timestamp.
 
 A missing database is built privately on the target filesystem, checked against a fresh committed-schema reference, checked for integrity/FKs and empty evidence/economic tables, then checkpointed and published without overwriting any target. Publication requires filesystem hard-link support (supported by the intended local NTFS deployment); unsupported filesystems fail closed. Failed construction removes only bootstrap-owned temporary files and leaves no published partial database. This is atomic publication, not a transaction spanning the independently committing migrations. Concurrent publication cannot replace another process's target.
 
@@ -83,3 +83,110 @@ Use `create_delivery(..., environment="PRODUCTION", producer_credential=...)` wi
 The implicit local validator is blocked. `LocalValidator`, legacy evidence persistence and `acceptance_policy` persistence are compatibility-only with explicit TEST/SANDBOX selection; production-linked compatibility writes fail closed. Keep `pipeline.py` and legacy acceptance/payment listeners out of production. The trusted service alone should control canonical DB writes; arbitrary in-process code or direct SQL access is outside this credential boundary.
 
 Collect the `marketplace.authority` logger at INFO level to a restricted persistent audit sink. It emits canonical principal ID, capability, operation, outcome and timestamp only. Keep authentication argument/local-variable capture disabled in request/error instrumentation. Repeated validation after restart is idempotent. Next-call authentication uses current protected environment configuration; missing or malformed/equal secrets deny operations. Provisioning these secrets does not enable financial capture or change GitHub authentication.
+
+## Production payment boundary (offline implementation; activation separately approved)
+
+Fresh bootstrap includes forward migrations 009 and 010. SQLite JSON functions are required and checked before schema creation. Existing databases are never upgraded
+by bootstrap. Applying 009 requires a separately approved WAL-aware backup, stopped
+financial execution, isolated validation and an explicit reviewed upgrade. Historical
+Sandbox rows acquire no Production provenance.
+
+Use paypal_client.PayPalClient("PRODUCTION") only with protected
+PAYPAL_PRODUCTION_CLIENT_ID / PAYPAL_PRODUCTION_CLIENT_SECRET. SANDBOX uses only
+the dedicated SANDBOX names. Endpoints are fixed; generic credentials, PAYPAL_MODE,
+caller URLs, redirects, proxy-environment routing and mutation retries are unsupported.
+Production credentials are not provisioned by this source change.
+
+The trusted financial service alone runs production_payment_flow: register and
+commit an exact obligation backed by approved eligibility; explicitly approve order
+creation; retrieve the validated customer URL with client.get_approval_url(order_id); let the buyer approve the bound AUTHORIZE order through PayPal; separately
+approve merchant authorization; retrieve and verify the exact authorization and order;
+approve canonical payment authorization from the opaque provider receipt; commit;
+then create and commit the matching canonical settlement. A return token or
+authenticated=True dictionary cannot establish Production payment authority.
+Receipts protect the API boundary, not against arbitrary code execution in the trusted
+service process. Order creation/authorization claims are committed before dispatch.
+If a process dies or a provider result is unclear, observe the existing resource;
+never blindly reissue the operation. Restarts re-retrieve authoritative evidence.
+
+Capture is a separate approval. Keep CANONICAL_LIVE_CAPTURE_ENABLED=false until
+explicit authorization. The same dedicated one-shot process must also receive protected
+CANONICAL_CAPTURE_APPROVAL JSON containing exactly settlement_id, obligation_id,
+eligibility_decision_id, payment_authorization_id, environment, amount_cents,
+currency, and timezone-aware expires_at (at most 30 minutes ahead).
+All terms must match persisted state. Do not put credential values on command lines.
+Use capture_once for that one settlement; no polling, discovery, Payouts or legacy workers.
+Missing/expired/mismatching approval, STOP or missing claim schema fails closed.
+STOP applies to capture preparation/dispatch, not to an already in-flight request.
+
+Production capture specifies the exact amount and final_capture=true. A durable unique
+claim precedes dispatch. The Production client requires a single-use permit derived from that committed claim; the exact transaction gate is checked again after OAuth and immediately before capture dispatch. Uncertain provider responses enter OUTCOME_UNKNOWN and cannot
+be retried. After a crash with a claimed CAPTURE_REQUESTED state, follow the existing
+supervised recovery procedure above. Reconciliation uses only GET resource operations
+(after OAuth authentication), validates exact resource relationships and terms, and
+never captures/refunds/voids/reauthorizes. NOT_CAPTURED remains inconclusive.
+Revenue is a separate explicitly authorized operation.
+
+Offline checks: python -B test_production_payment_boundary.py,
+python -B test_canonical_bootstrap.py, and
+python verify_production_candidate.py --db <isolated-or-read-only-source-db> --receiver.
+Never run genuine/manual provider tests or enable credentials as part of verification.
+
+### Adversarial remediation: capture provenance and readiness
+
+Production capture persistence accepts only opaque CaptureEvidence returned by the
+fixed-environment provider client after a capture response or capture-resource GET.
+Caller dictionaries and normalization results cannot be authoritative. Persistence
+rechecks the bound authorization/order/payee/terms, requires the existing durable claim,
+records the provenance source and hash, and freezes the resulting proof. Confirmation
+and revenue recheck that persisted proof. Sandbox compatibility data cannot promote.
+
+Migration 009 also freezes existing capture claims against deletion, identity/timestamp
+updates and replacement/conflict bypasses. Helper 007 is unchanged. A lost process-local
+permit after a committed claim requires observation, never a new capture dispatch.
+
+OAuth/network/non-success read responses mean observation unavailable: reconciliation
+stays durably RECONCILING and can resume with a later GET. Contradictory/malformed
+authoritative resources still fail closed under the existing manual-review policy.
+No capture is retried and terminal-state semantics remain unchanged.
+
+The verifier defaults to actual supplied-database readiness. It validates an unchanged
+SQLite snapshot against the exact current schema, including every required trigger,
+index, constraint and migration identity, before running isolated regressions.
+Use --schema-only for that read-only structural/integrity/FK gate.
+Use --migration-compatibility only to test forward migration of a private copy of an
+older database; its output explicitly does not establish readiness of the original.
+Older-schema compatibility checks apply forward migrations only to a private copy,
+then run the same complete bounded semantic schema check used by readiness mode.
+They do not certify readiness of the unmodified supplied database. Missing financial
+or evidence enforcement fails even when migration metadata is present.
+
+Trusted-process assumption: arbitrary code execution, direct SQL forgery, private
+receipt-factory/transport access or protected-environment modification inside the
+financial process remain outside this API boundary. Untrusted work, tests and plugins
+must not execute in the credential-bearing financial process. Offline tests run with
+fake credentials in isolated processes/databases and cannot establish live authority.
+
+
+### Forward evidence contract and historical schema readiness
+
+Fresh bootstrap applies migration 010 after 009. It does not upgrade an existing
+older database. An upgrade requires a separately approved, backed-up operation;
+no live upgrade is authorized by the development/testing procedure.
+
+Migration 010 leaves every historical row untouched. New inserts and updates
+require a nonblank text commit, integer observation flags in {0,1}, and a nullable
+integer pytest exit code. Validation checks must serialize a JSON object whose
+named values are canonical check-status strings. An empty object remains valid
+compatibility serialization; it does not itself establish technical acceptance.
+Duplicate evidence/result identities cannot be replaced, even with SQLite conflict
+clauses and recursive triggers disabled. Existing eligibility freezes remain intact.
+
+Readiness requires the complete current schema, including exact enforcement-token
+bodies, FKs, CHECK constraints and indexes. SQL whitespace/comments and keyword
+case may vary. Only the audited historical raw_evidence and validation_results
+base forms are additionally permitted, and only with all migration-010 guards.
+The documented legacy patch_telemetry, settlements and settlement_journal tables
+may remain with their audited definitions. They are not canonical financial
+execution authorities. Unknown additional objects or missing guards fail closed.
+Migration metadata alone never establishes readiness.

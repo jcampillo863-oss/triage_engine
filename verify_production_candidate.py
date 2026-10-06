@@ -16,6 +16,10 @@ parser = argparse.ArgumentParser(description='Isolated network-blocked canonical
 parser.add_argument('--db', type=pathlib.Path, default=pathlib.Path(db.DB_PATH),
                     help='Existing canonical database; verification uses only a copy')
 parser.add_argument('--receiver', action='store_true')
+parser.add_argument('--migration-compatibility', action='store_true',
+                    help='Apply forward schemas only to a private copy; not actual-DB readiness')
+parser.add_argument('--schema-only', action='store_true',
+                    help='Validate supplied schema/integrity/FKs read-only without regression scripts')
 args = parser.parse_args()
 source_path = args.db.resolve()
 if not source_path.is_file():
@@ -63,15 +67,41 @@ with tempfile.TemporaryDirectory(prefix='canonical-sprint-') as tmp, isolated_fi
     dest.close()
     db.DB_PATH = str(target)
     db.DB_DIR = tmp
-    from migration_008_settlement_eligibility import apply_schema
-    with db.get_db() as conn:
-        conn.execute("BEGIN IMMEDIATE")
-        apply_schema(conn)
-        conn.commit()
+    import canonical_bootstrap
+    if args.migration_compatibility:
+        from migration_008_settlement_eligibility import apply_schema
+        from migration_009_payment_provider_boundary import apply_schema as apply_payment_schema
+        from migration_010_forward_evidence_contract import apply_schema as apply_evidence_schema
+        with db.get_db() as conn:
+            conn.execute("BEGIN IMMEDIATE")
+            apply_schema(conn)
+            apply_payment_schema(conn)
+            apply_evidence_schema(conn)
+            conn.commit()
+        print('mode: migration_compatibility_only; supplied_database_readiness: NOT_ESTABLISHED')
+    else:
+        print('mode: supplied_database_readiness')
+    try:
+        # target is an unchanged SQLite backup in readiness mode, not an upgraded fixture.
+        if args.migration_compatibility:
+            canonical_bootstrap.validate_migration_compatibility(target)
+        else:
+            canonical_bootstrap.validate_database(target)
+    except (canonical_bootstrap.BootstrapError, sqlite3.Error, OSError):
+        print('supplied_database_schema: FAILED; required structure/integrity/FKs unavailable')
+        sys.exit(1)
+    if args.migration_compatibility:
+        print('isolated_forward_payment_schema: valid; historical_base_readiness: NOT_ESTABLISHED')
+    else:
+        print('supplied_database_schema: current_structurally_valid')
+    if args.schema_only:
+        sys.exit(0)
     names.append("test_settlement_eligibility")
     names.append("test_service_principals")
     names.append("test_paypal_canonical_integration")
     names.append("test_snapshot_source_hygiene")
+    names.append("test_production_payment_boundary")
+    names.append("test_forward_evidence_schema")
     failures = []
     for name in names:
         output = io.StringIO()

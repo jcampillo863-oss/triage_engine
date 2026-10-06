@@ -14,7 +14,7 @@ def capture_order():
 
     client_id = os.getenv("PAYPAL_CLIENT_ID")
     client_secret = os.getenv("PAYPAL_CLIENT_SECRET")
-    
+
     # Historical provider binding removed; original evidence remains outside source.
     order_id = None  # Retired direct-order path has no bound transaction.
 

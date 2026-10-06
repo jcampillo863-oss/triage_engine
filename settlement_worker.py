@@ -22,7 +22,7 @@ PAYPAL_BASE_URL = (
 def get_paypal_token() -> str:
     client_id = os.getenv("PAYPAL_CLIENT_ID")
     client_secret = os.getenv("PAYPAL_CLIENT_SECRET")
-    
+
     if not client_id or not client_secret:
         raise ValueError("[CRITICAL] PayPal credentials missing from environment.")
 
@@ -42,7 +42,7 @@ def generate_coherence_certificate(settlement_id: str):
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM settlements WHERE settlement_id = ?", (settlement_id,))
         settlement = dict(cursor.fetchone())
-        
+
         cursor.execute("SELECT * FROM settlement_journal WHERE settlement_id = ? ORDER BY id ASC", (settlement_id,))
         journal = [dict(r) for r in cursor.fetchall()]
 
@@ -61,14 +61,14 @@ def generate_coherence_certificate(settlement_id: str):
         "transition_journal": journal,
         "generated_at": datetime.now(timezone.utc).isoformat()
     }
-    
+
     cert_dir = Path("data/certificates")
     cert_dir.mkdir(parents=True, exist_ok=True)
     cert_path = cert_dir / f"cert_{settlement['task_id']}.json"
-    
+
     with open(cert_path, "w") as f:
         json.dump(cert, f, indent=2)
-        
+
     print(f"[CERTIFICATE] Coherence Certificate issued at {cert_path}")
 
 def execute_outbound_payout(settlement: dict) -> dict:
@@ -116,7 +116,7 @@ def execute_outbound_payout(settlement: dict) -> dict:
 def capture_authorized_payment(settlement: dict) -> bool:
     """Captures funds from an authorized client payment upon evidence verification."""
     settlement_id = settlement["settlement_id"]
-    
+
     if not se.transition_state(settlement_id, "SUBMITTING", "Worker initiating PayPal payment capture"):
         return False
 
@@ -157,7 +157,7 @@ def capture_authorized_payment(settlement: dict) -> bool:
             )
             resp_status_code = resp.status_code
             response_data = resp.json()
-        
+
             if resp_status_code in [200, 201]:
                         capture_id = response_data.get("id")
                         status = response_data.get("status")
@@ -200,20 +200,20 @@ def reconcile_settlement(settlement: dict):
     """Queries PayPal to verify the capture status of pending/submitted transactions."""
     settlement_id = settlement["settlement_id"]
     capture_id = settlement["provider_batch_id"]
-    
+
     if not capture_id:
         return
 
     try:
         token = get_paypal_token()
         headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
-        
+
         resp = requests.get(f"{PAYPAL_BASE_URL}/v2/payments/captures/{capture_id}", headers=headers, timeout=10)
-        
+
         if resp.status_code == 200:
             data = resp.json()
             status = data.get("status")
-            
+
             if status == "COMPLETED":
                 se.transition_state(settlement_id, "SETTLED", "Reconciled: Payment capture verified COMPLETED", json.dumps(data))
                 generate_coherence_certificate(settlement_id)
@@ -228,14 +228,14 @@ def run_worker_cycle():
     """Single pass of the background worker loop."""
     with db.get_db() as conn:
         cursor = conn.cursor()
-        
+
         # 1. Process AUTHORIZED captures
         cursor.execute("SELECT * FROM settlements WHERE state = 'AUTHORIZED'")
         for row in cursor.fetchall():
             s = dict(row)
             print(f"[WORKER] Executing inbound capture for settlement {s['settlement_id']}...")
             capture_authorized_payment(s)
-            
+
         # 2. Reconcile pending/submitted captures
         cursor.execute("SELECT * FROM settlements WHERE state IN ('SUBMITTED', 'PENDING', 'RECONCILE')")
         for row in cursor.fetchall():

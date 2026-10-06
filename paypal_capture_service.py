@@ -34,8 +34,11 @@ class CaptureResult:
 def _check_capture_gate(settlement):
     if (Path(__file__).resolve().parent / "data" / "STOP").exists():
         raise CaptureServiceError("Capture stopped by operator")
-    if settlement["environment"] == "PRODUCTION" and os.getenv("CANONICAL_LIVE_CAPTURE_ENABLED") != "true":
-        raise CaptureServiceError("Production capture is disabled")
+    if settlement["environment"] == "PRODUCTION":
+        if os.getenv("CANONICAL_LIVE_CAPTURE_ENABLED") != "true":
+            raise CaptureServiceError("Production capture is disabled")
+        from production_payment_flow import check_capture_approval
+        check_capture_approval(settlement)
 
 
 def build_capture_request_id(settlement_id: str) -> str:
@@ -131,6 +134,11 @@ def prepare_capture(
         )
 
     _check_capture_gate(settlement)
+    if settlement["environment"] == "PRODUCTION":
+        from production_payment_flow import check_settlement_binding
+        check_settlement_binding(conn,settlement)
+        if not conn.execute("SELECT 1 FROM sqlite_master WHERE name='canonical_capture_attempts' AND type='table'").fetchone():
+            raise CaptureServiceError("Capture schema must be reviewed before Production preparation")
     state = settlement["state"]
 
     _ensure_capture_attempt_schema(conn)
@@ -205,6 +213,8 @@ def _claim_capture_attempt(conn, settlement_id, request_id):
             (settlement_id,request_id),
         )
         conn.commit()
+        from paypal_client import _new_claim_receipt
+        return _new_claim_receipt(settlement_id,request_id)
     except BaseException:
         conn.rollback()
         raise
@@ -214,7 +224,8 @@ def execute_capture(
     conn,
     settlement_id: str,
     *,
-    capture_fn: Callable[..., Dict[str, Any]],
+    capture_fn: Callable[..., Dict[str, Any]] = None,
+    provider_client=None,
 ) -> CaptureResult:
     """
     Execute provider capture for an already-prepared settlement.
@@ -260,15 +271,35 @@ def execute_capture(
     )
 
     _check_capture_gate(settlement)
-    _claim_capture_attempt(conn, settlement_id, request_id)
+    production = settlement["environment"] == "PRODUCTION"
+    if production:
+        from paypal_client import require_client
+        from production_payment_flow import check_settlement_binding,validate_capture,preserve_capture
+        require_client(provider_client,"PRODUCTION")
+        if capture_fn is not None:
+            raise CaptureServiceError("Production capture cannot use a caller-injected provider function")
+        expected = check_settlement_binding(conn,settlement)
+        if not conn.execute("SELECT 1 FROM sqlite_master WHERE name='canonical_capture_attempts' AND type='table'").fetchone():
+            raise CaptureServiceError("Reviewed capture schema required")
+    elif capture_fn is None:
+        raise CaptureServiceError("Explicit test/Sandbox capture function required")
+    claim_receipt = _claim_capture_attempt(conn, settlement_id, request_id)
     _check_capture_gate(settlement)
     try:
-        payload = capture_fn(
-            provider_authorization_id,
-            request_id=request_id,
-        )
+        if production:
+            from production_payment_flow import committed_capture_permit
+            permit = committed_capture_permit(conn,settlement,request_id,claim_receipt=claim_receipt)
+            payload = provider_client.capture_authorization(provider_authorization_id,
+                request_id=request_id,amount_cents=settlement["amount_cents"],currency=settlement["currency"],
+                permit=permit)
+            observation = validate_capture(payload,expected)
+        else:
+            payload = capture_fn(provider_authorization_id,request_id=request_id)
 
-        capture_id, status = _extract_capture_identity(payload)
+        if production:
+            capture_id,status=observation['capture_id'],observation['status']
+        else:
+            capture_id,status=_extract_capture_identity(payload)
         if status != "COMPLETED":
             raise CaptureServiceError("Provider capture is not definitively completed")
     except Exception:
@@ -279,6 +310,8 @@ def execute_capture(
         )
         return CaptureResult(settlement_id=settlement_id, state=unknown["state"], provider_capture_id=None)
 
+    if production:
+        preserve_capture(conn,settlement,payload)
     confirmed = transition_settlement(
         conn,
         settlement_id,
@@ -301,7 +334,8 @@ def reconcile_capture(
     conn,
     settlement_id: str,
     *,
-    observe_fn: Callable[..., Dict[str, Any]],
+    observe_fn: Callable[..., Dict[str, Any]] = None,
+    provider_client=None,
 ) -> CaptureResult:
     """
     Reconcile an ambiguous provider capture outcome.
@@ -325,6 +359,16 @@ def reconcile_capture(
             f"Settlement not found: {settlement_id}"
         )
 
+    production = settlement["environment"] == "PRODUCTION"
+    if production:
+        from paypal_client import require_client
+        from production_payment_flow import observe_capture,check_settlement_binding
+        require_client(provider_client,"PRODUCTION")
+        if observe_fn is not None:
+            raise CaptureServiceError("Production reconciliation requires the bound client")
+        check_settlement_binding(conn,settlement)
+    elif observe_fn is None:
+        raise CaptureServiceError("Explicit test/Sandbox observation function required")
     current_state = settlement["state"]
 
     if current_state == "OUTCOME_UNKNOWN":
@@ -369,9 +413,17 @@ def reconcile_capture(
         )
     )
 
-    observation = observe_fn(
-        provider_authorization_id
-    )
+    if production:
+        from paypal_client import ProviderObservationUnavailable
+        try:
+            observation = observe_capture(conn,provider_client,settlement)
+        except ProviderObservationUnavailable:
+            # RECONCILING is already durable; later observation may resume.
+            return CaptureResult(settlement_id=settlement_id,state="RECONCILING",provider_capture_id=None)
+        except Exception:
+            observation = {"outcome":"UNRESOLVED"}
+    else:
+        observation = observe_fn(provider_authorization_id)
 
     if not isinstance(observation, dict):
         raise CaptureServiceError(

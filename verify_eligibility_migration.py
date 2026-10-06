@@ -7,7 +7,7 @@ import db
 source=Path(db.DB_PATH).resolve()
 backup=max((source.parent/'backups').glob('pre-eligibility-008-*.db'),key=lambda p:p.name)
 with closing(sqlite3.connect(backup.as_uri()+'?mode=ro',uri=True)) as before, closing(sqlite3.connect(source.as_uri()+'?mode=ro',uri=True)) as after:
-    tables=[r[0] for r in before.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")]
+    tables=[r[0] for r in before.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT GLOB 'sqlite_*'")]
     for table in tables:
         if table=='schema_meta':
             old=list(before.execute('SELECT * FROM schema_meta ORDER BY version'))

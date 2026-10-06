@@ -96,25 +96,25 @@ class MultiPlatformFetcher(BaseFetcher):
             try:
                 # Query GitHub REST API for open issues with bounty or help-wanted labels
                 api_url = "https://api.github.com/search/issues?q=is:open+is:issue+label:bounty&sort=created&order=desc"
-                
+
                 headers = {
                     'User-Agent': 'AtlasAeon-BountyHunter',
                     'Accept': 'application/vnd.github.v3+json'
                 }
-                
+
                 req = urllib.request.Request(api_url, headers=headers)
                 with urllib.request.urlopen(req, timeout=10) as response:
                     data = json.loads(response.read().decode('utf-8'))
-                    
+
                 items = data.get('items', [])
                 for issue in items[:10]: # Grab top 10 freshest opportunities
                     title_text = issue.get('title', '')
                     issue_id = str(issue.get('id', time.time()))
                     clean_id = f"live_{abs(hash(issue_id)) % 100000}"
-                    
+
                     # Extract dollar amount from title if present, otherwise use default
                     bounty = self.parse_bounty_value(title_text, source_info['default_bounty'])
-                    
+
                     fetched_items.append({
                         "id": clean_id,
                         "title": title_text,
@@ -125,13 +125,13 @@ class MultiPlatformFetcher(BaseFetcher):
                     })
             except Exception as e:
                 print(f"[-] Failed to fetch live GitHub issues: {e}")
-                
+
             return fetched_items
 
     def sync_all_sources(self):
             existing_jobs = self.load_existing_jobs()
             existing_ids = {j.get("id") for j in existing_jobs}
-            
+
             new_count = 0
             for src in SOURCES:
                 # Call our live GitHub API fetcher instead of atom

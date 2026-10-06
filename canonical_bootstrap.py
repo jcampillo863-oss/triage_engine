@@ -24,6 +24,8 @@ MIGRATIONS = (
     (6, 'migration_006_payment_authorization_evidence', 'migrate', 'payment_authorization_evidence'),
     (7, 'migration_007_capture_attempt_guard', 'migrate', None),
     (8, 'migration_008_settlement_eligibility', 'migrate', 'canonical_settlement_eligibility'),
+    (9, 'migration_009_payment_provider_boundary', 'migrate', 'payment_provider_boundary'),
+    (10, 'migration_010_forward_evidence_contract', 'migrate', 'forward_evidence_contract'),
 )
 
 
@@ -72,13 +74,13 @@ def _readonly(path):
 
 
 def _schema(conn):
-    # Compare definitions, including CHECK constraints, unique indexes and all
-    # enforcement triggers. Definitions are compared exactly against the schema
-    # emitted by this fixed initializer/migration chain.
+    # GLOB keeps the underscore literal: sqliteApp objects belong to the app.
+    # Capture all explicit definitions. Readiness compares SQL tokens and only
+    # enumerated historical forms; constraints/indexes/guards remain mandatory.
     return tuple((kind, name, table, sql.strip() if sql else None)
                  for kind, name, table, sql in conn.execute(
                      "SELECT type,name,tbl_name,sql FROM sqlite_master "
-                     "WHERE name NOT LIKE 'sqlite_%' ORDER BY type,name"))
+                     "WHERE name NOT GLOB 'sqlite_*' ORDER BY type,name"))
 
 
 def _validate(path, reference_schema, fresh=False):
@@ -92,10 +94,11 @@ def _validate(path, reference_schema, fresh=False):
             actual = conn.execute('SELECT version,migration_name FROM schema_meta ORDER BY version').fetchall()
             if actual != expected:
                 raise BootstrapError('Older, future or conflicting migration metadata; upgrade review required')
-            if _schema(conn) != reference_schema:
+            from schema_readiness import compatible_schema
+            if not compatible_schema(_schema(conn), reference_schema):
                 raise BootstrapError('Partial or conflicting canonical schema; upgrade review required')
             if fresh:
-                tables = conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name!='schema_meta'").fetchall()
+                tables = conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT GLOB 'sqlite_*' AND name!='schema_meta'").fetchall()
                 for (table,) in tables:
                     # Identifiers originate exclusively in committed schema.
                     quoted = '"' + table.replace('"', '""') + '"'
@@ -103,6 +106,25 @@ def _validate(path, reference_schema, fresh=False):
                         raise BootstrapError('Fresh database contains unexpected historical/economic rows')
     except sqlite3.Error as exc:
         raise BootstrapError('Unreadable or incomplete database; upgrade review required') from exc
+
+
+def validate_database(database):
+    """Read-only readiness check; never migrate or publish the supplied DB."""
+    target=Path(database).resolve()
+    if not target.is_file():
+        raise BootstrapError('Canonical database missing; bootstrap separately')
+    with tempfile.TemporaryDirectory(prefix='canonical-readiness-reference-') as reference_dir:
+        reference=Path(reference_dir)/'reference.db'
+        _construct(reference)
+        with closing(_readonly(reference)) as conn:
+            reference_schema=_schema(conn)
+        _validate(target,reference_schema)
+    return {'database':str(target),'outcome':'current_structurally_valid'}
+
+def validate_migration_compatibility(database):
+    """Full bounded readiness of a privately upgraded fixture, never its source DB."""
+    validate_database(database)
+    return {'outcome': 'forward_schema_compatible_only'}
 
 
 def bootstrap(database=None, *, _after_step=None, _before_publish=None):

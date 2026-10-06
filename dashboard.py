@@ -49,18 +49,18 @@ class DashboardHandler(BaseHTTPRequestHandler):
             self._set_headers("application/json")
             jobs = self.load_matched_jobs()
             ledger = self.load_ledger()
-            
+
             total_usd = sum(j.get("bounty_usd", 0) for j in jobs)
             high_value_count = sum(1 for j in jobs if j.get("bounty_usd", 0) >= 1000)
-            
+
             settled_usd = sum(
-                entry.get("bounty_usd", 0) 
-                for entry in ledger 
+                entry.get("bounty_usd", 0)
+                for entry in ledger
                 if isinstance(entry, dict) and entry.get("bounty_usd", 0) > 0
             )
-            
+
             dispatched_count = len(ledger)
-            
+
             analytics = {
                 "total_jobs": len(jobs),
                 "total_usd": total_usd,
@@ -81,11 +81,11 @@ class DashboardHandler(BaseHTTPRequestHandler):
                 with open(cert_path, "r", encoding="utf-8") as cf:
                     self.wfile.write(cf.read().encode("utf-8"))
             else:
-                self.wfile.write(json.dumps({"status": "error", "message": "Certificate not found"}).encode("utf-8"))        
+                self.wfile.write(json.dumps({"status": "error", "message": "Certificate not found"}).encode("utf-8"))
         elif path.startswith("/api/proposal"):
             task_id = path.replace("/api/proposal/", "").strip()
             proposal_path = os.path.join(PROPOSALS_DIR, f"proposal_{task_id}.txt")
-            
+
             self._set_headers("text/plain")
             if os.path.exists(proposal_path):
                 with open(proposal_path, "r", encoding="utf-8") as pf:
@@ -100,7 +100,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
             title = task_job.get("title", "")
 
             patch_result = process_task_patch(task_id, title)
-            
+
             patch_file = patch_result.get("patch_path", "")
             diff_text = ""
             if patch_file and os.path.exists(patch_file):
@@ -122,7 +122,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         parsed_path = urllib.parse.urlparse(self.path)
         path = parsed_path.path.rstrip('/')
-        
+
         content_length = int(self.headers.get("Content-Length", 0))
         body = self.rfile.read(content_length).decode("utf-8")
         data = json.loads(body) if body else {}
@@ -131,7 +131,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
             try:
                 task_id = data.get("task_id")
                 proposal_text = data.get("proposal_text", "")
-                
+
                 jobs = self.load_matched_jobs()
                 task_job = next((j for j in jobs if j.get("id") == task_id), {})
                 bounty_usd = task_job.get("bounty_usd", 350)
@@ -172,12 +172,12 @@ class DashboardHandler(BaseHTTPRequestHandler):
             try:
                 with open(ledger_path, "r", encoding="utf-8") as f:
                     ledger = json.load(f)
-                    
+
                 for entry in ledger:
                     if entry.get("id") == task_id or entry.get("task_id") == task_id:
                         entry["status"] = new_status
                         entry["certified"] = True
-                        
+
                 with open(ledger_path, "w", encoding="utf-8") as f:
                     json.dump(ledger, f, indent=2)
                 print(f"[*] Ledger updated: Task [{task_id}] marked as '{new_status}'.")
@@ -187,7 +187,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
     def generate_coherence_certificate(self, task_id, pr_data):
         cert_dir = os.path.join("data", "certificates")
         os.makedirs(cert_dir, exist_ok=True)
-        
+
         cert_path = os.path.join(cert_dir, f"cert_{task_id}.json")
         certificate_data = {
             "task_id": task_id,
@@ -197,7 +197,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
             "merged_at": pr_data.get("merged_at", "unknown"),
             "audit_type": "Human-Auditable Coherence Certificate"
         }
-        
+
         with open(cert_path, "w", encoding="utf-8") as f:
             json.dump(certificate_data, f, indent=2)
         print(f"[*] Coherence certificate generated at: {cert_path}")

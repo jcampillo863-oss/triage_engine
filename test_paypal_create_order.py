@@ -59,7 +59,7 @@ def create_mock_order():
         print("[SUCCESS] Mock order created successfully!")
         print(f"Order ID: {order_data.get('id')}")
         print(f"Status: {order_data.get('status')}")
-        
+
         # Extract and print the checkout approval URL
         for link in order_data.get("links", []):
             if link.get("rel") == "approve":

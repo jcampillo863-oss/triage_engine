@@ -10,7 +10,7 @@ def test_live_auth():
     mode = os.getenv("PAYPAL_MODE", "sandbox")
     client_id = os.getenv("PAYPAL_CLIENT_ID")
     client_secret = os.getenv("PAYPAL_CLIENT_SECRET")
-    
+
     # Determine correct base URL based on mode
     if mode == "live":
         base_url = "https://api-m.paypal.com"

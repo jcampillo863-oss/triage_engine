@@ -21,7 +21,7 @@ def run_batch_sweep():
     run_data = []
     for tid in TARGET_IDS:
         action_state, notes = safe_ensure_solution(tid, STUB_CODE)
-        
+
         # Run patch gate via python command matching your workflow
         res = subprocess.run(
             ["python", "-c", f"from patcher import process_task_patch; process_task_patch('live_{tid}', 'maintenance')"],
@@ -29,7 +29,7 @@ def run_batch_sweep():
             text=True
         )
         status = "PASSED" if res.returncode == 0 else "FAILED"
-        
+
         # Infer classification tag
         t_type = "route" if tid in ['91801', '24923', '22865'] else ("docs" if tid == '84633' else "standard")
         if "SKIP" in action_state and t_type != "standard":

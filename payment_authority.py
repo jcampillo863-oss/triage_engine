@@ -1,3 +1,4 @@
+from contextlib import nullcontext
 import hashlib
 import json
 from datetime import datetime, timezone
@@ -124,7 +125,7 @@ def validate_provider_event(event, environment):
     }
 
 
-def establish_payment_authorization(
+def _establish_payment_authorization(
     *,
     provider_event,
     task_id,
@@ -133,6 +134,9 @@ def establish_payment_authorization(
     expected_currency,
     expected_provider,
     environment,
+    _conn=None,
+    _provider_receipt=None,
+    _production_obligation=None,
 ):
     task_id = (task_id or "").strip()
 
@@ -175,9 +179,37 @@ def establish_payment_authorization(
         environment,
     )
 
+    if environment == "PRODUCTION":
+        from paypal_client import evidence_data,ProviderBoundaryError
+        from production_payment_flow import obligation
+        if _conn is None:
+            raise PaymentAuthorityError("Production requires the trusted atomic payment path")
+        try:
+            proof=evidence_data(_provider_receipt)
+            obligation_record=obligation(_conn,_production_obligation)
+            required=dict(task_id=task_id,contract_acceptance_decision_id=contract_acceptance_decision_id,
+                amount_cents=expected_amount_cents,currency=expected_currency,provider=expected_provider,
+                environment=environment)
+            if any(obligation_record[k]!=value for k,value in required.items()):
+                raise ProviderBoundaryError("Obligation mismatch")
+            if (proof['environment']!='PRODUCTION' or proof['endpoint']!='https://api-m.paypal.com'
+                or proof['obligation_id']!=_production_obligation
+                or proof['payee_id']!=obligation_record['payee_id']
+                or proof['amount_cents']!=expected_amount_cents or proof['currency']!=expected_currency
+                or normalized['provider_authorization_id']!=proof['authorization_id']
+                or normalized['amount_cents']!=proof['amount_cents']
+                or normalized['currency']!=proof['currency'] or normalized['provider']!='paypal'):
+                raise ProviderBoundaryError("Provider proof mismatch")
+            binding=_conn.execute("SELECT order_id FROM payment_order_bindings WHERE obligation_id=?",
+                                  (_production_obligation,)).fetchone()
+            if binding is None or binding[0]!=proof['order_id']:
+                raise ProviderBoundaryError("Order binding mismatch")
+        except Exception:
+            raise PaymentAuthorityError("Trusted Production provider evidence and exact obligation required") from None
+
     now = utc_now()
 
-    with db.get_db() as conn:
+    with (nullcontext(_conn) if _conn is not None else db.get_db()) as conn:
         decision = conn.execute(
             """
             SELECT *
@@ -484,7 +516,8 @@ def establish_payment_authorization(
                     (authorization_id,),
                 ).fetchone()
 
-        conn.commit()
+        if _conn is None:
+            conn.commit()
 
         event_row = conn.execute(
             """
@@ -509,3 +542,12 @@ def establish_payment_authorization(
         "verification": verification_row,
         "authorization": authorization,
     }
+
+
+def establish_payment_authorization(**fields):
+    """Compatibility entry; Production requires a trusted provider receipt."""
+    if str(fields.get('environment','')).strip().upper()=='PRODUCTION':
+        raise PaymentAuthorityError("Production requires immutable obligation and trusted provider evidence")
+    if '_conn' in fields:
+        raise PaymentAuthorityError("Caller connection override forbidden")
+    return _establish_payment_authorization(**fields)

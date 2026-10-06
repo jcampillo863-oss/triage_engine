@@ -66,11 +66,11 @@ class MultiPlatformDaemon:
         tid = task["task_id"]
         folder_suffix = tid.replace(":", "_")
         ws_folder = Path(f"workspace/task_{folder_suffix}")
-        
+
         t_type = classify_task(task)
         content = get_template_for_type(t_type)
         action_state, notes = self.safe_ensure_solution(ws_folder, content)
-        
+
         res = subprocess.run(
             ["python", "-c", f"from patcher import process_task_patch; process_task_patch('{folder_suffix}', '{t_type}')"],
             capture_output=True, text=True

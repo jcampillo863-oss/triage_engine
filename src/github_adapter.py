@@ -19,7 +19,7 @@ class GitHubAdapter:
         res = requests.get(url, headers=headers)
         if res.status_code != 200:
             return []
-        
+
         normalized = []
         for issue in res.json():
             # Skip pull requests returned in issues endpoint if desired

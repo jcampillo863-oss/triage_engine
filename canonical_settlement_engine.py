@@ -85,6 +85,12 @@ def create_settlement(
         or eligibility["contract_acceptance_decision_id"] != contract_acceptance_decision_id
         or eligibility["policy_name"] != "canonical_settlement_eligibility" or eligibility["policy_version"] != "1"):
         raise ValueError("Settlement eligibility does not match the requested obligation")
+    if environment == "PRODUCTION":
+        from production_payment_flow import check_settlement_binding
+        check_settlement_binding(conn, dict(task_id=task_id,obligation_id=obligation_id,
+            eligibility_decision_id=eligibility_decision_id,contract_acceptance_decision_id=contract_acceptance_decision_id,
+            payment_authorization_id=payment_authorization_id,amount_cents=amount_cents,currency=currency,
+            provider=provider,environment=environment))
     if existing:
         expected = dict(task_id=task_id, obligation_id=obligation_id,
             contract_acceptance_decision_id=contract_acceptance_decision_id,
@@ -252,6 +258,10 @@ def transition_settlement(
             "PROVIDER_CONFIRMED requires provider_capture_id."
         )
 
+    if current["environment"] == "PRODUCTION" and (new_state=="PROVIDER_CONFIRMED" or provider_capture_id is not None):
+        from production_payment_flow import check_confirmed_capture
+        check_confirmed_capture(conn,current,provider_capture_id or current["provider_capture_id"])
+
     now = utc_now()
 
     if provider_capture_id is not None:
@@ -324,6 +334,10 @@ def record_revenue(
 
     if settlement is None:
         raise ValueError("Settlement does not exist.")
+
+    if settlement["environment"] == "PRODUCTION":
+        from production_payment_flow import check_confirmed_capture
+        check_confirmed_capture(conn,settlement,settlement["provider_capture_id"])
 
     existing = conn.execute(
         """

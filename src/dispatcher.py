@@ -78,7 +78,7 @@ class TaskDispatcher:
         # 3. Record in local persistent ledger
         with open(self.ledger_path, "r+", encoding="utf-8") as f:
             ledger = json.load(f)
-            
+
             record = {
                 "task_id": task_id,
                 "title": title,
@@ -89,10 +89,10 @@ class TaskDispatcher:
                 "status": "DISPATCHED_TO_PLATFORM" if github_submitted else "APPROVED_AND_QUEUED",
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }
-            
+
             ledger["dispatched_proposals"].append(record)
             ledger["total_projected_aud"] += bounty_usd
-            
+
             f.seek(0)
             json.dump(ledger, f, indent=2)
             f.truncate()

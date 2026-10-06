@@ -66,18 +66,18 @@ class MultiPlatformDaemon:
         tid = task["task_id"]
         folder_suffix = tid.replace(":", "_").replace("/", "_")
         ws_folder = Path(f"workspace/task_{folder_suffix}")
-        
+
         t_type = classify_task(task)
         content = get_template_for_type(t_type)
         action_state, notes = self.safe_ensure_solution(ws_folder, content)
-        
+
         res = subprocess.run(
             ["python", "-c", f"from patcher import process_task_patch; process_task_patch('{folder_suffix}', '{t_type}')"],
             capture_output=True, text=True
         )
         status = "PASSED" if res.returncode == 0 else "FAILED"
         print(f"[{status}] Task {tid} ({t_type}) -> {action_state}")
-        
+
         return {
             "id": tid,
             "type": t_type,
@@ -96,7 +96,7 @@ class MultiPlatformDaemon:
                     run_data.append(record)
                     self.seen.add(tid)
         self._save_ledger()
-        
+
         if run_data:
             generate_html_report(run_data, "workspace/triage_report.html")
             print(f"[AUDIT] Exported post-sweep report for {len(run_data)} items.")

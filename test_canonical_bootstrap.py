@@ -49,15 +49,15 @@ class BootstrapTests(unittest.TestCase):
             self.assertEqual(conn.execute('PRAGMA integrity_check').fetchall(), [('ok',)])
             self.assertEqual(conn.execute('PRAGMA foreign_key_check').fetchall(), [])
             self.assertEqual(conn.execute('SELECT version FROM schema_meta ORDER BY version').fetchall(),
-                             [(1,), (2,), (3,), (4,), (5,), (6,), (8,)])
-            for (table,) in conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name!='schema_meta'").fetchall():
+                             [(1,), (2,), (3,), (4,), (5,), (6,), (8,), (9,), (10,)])
+            for (table,) in conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT GLOB 'sqlite_*' AND name!='schema_meta'").fetchall():
                 self.assertEqual(conn.execute('SELECT COUNT(*) FROM "' + table + '"').fetchone()[0], 0)
 
     def test_exact_substrate_and_migration_order(self):
         steps = []
         bootstrap.bootstrap(self.target, _after_step=lambda version, path: steps.append(version))
-        self.assertEqual(steps, list(range(9)))
-        self.assertEqual([entry[0] for entry in bootstrap.MIGRATIONS], list(range(1, 9)))
+        self.assertEqual(steps, list(range(11)))
+        self.assertEqual([entry[0] for entry in bootstrap.MIGRATIONS], list(range(1, 11)))
         self.assertIsNone(bootstrap.MIGRATIONS[6][3])
 
     def test_repeat_is_byte_preserving_no_backup(self):
@@ -84,7 +84,7 @@ class BootstrapTests(unittest.TestCase):
             self.assertEqual(conn.execute('SELECT COUNT(*) FROM raw_evidence').fetchone()[0], 1)
 
     def test_failure_at_each_committed_step_never_publishes(self):
-        for failed_step in range(9):
+        for failed_step in range(11):
             with self.subTest(step=failed_step):
                 def fail(version, path):
                     if version == failed_step:
@@ -115,7 +115,7 @@ class BootstrapTests(unittest.TestCase):
         self.assertEqual(before, self.target.read_bytes())
 
     def test_future_version_rejected(self):
-        self.corrupt_metadata("INSERT INTO schema_meta VALUES(9,'future','now')")
+        self.corrupt_metadata("INSERT INTO schema_meta VALUES(11,'future','now')")
 
     def test_older_version_rejected(self):
         self.corrupt_metadata('DELETE FROM schema_meta WHERE version=8')
@@ -169,11 +169,11 @@ class BootstrapTests(unittest.TestCase):
             with closing(sqlite3.connect(path)) as conn:
                 observations.append(conn.execute('PRAGMA journal_mode').fetchone()[0])
         bootstrap.bootstrap(self.target, _after_step=observe)
-        self.assertEqual(observations, ['wal'] * 9)
+        self.assertEqual(observations, ['wal'] * 11)
         self.assertFalse(Path(str(self.target) + '-wal').exists())
         with closing(sqlite3.connect(self.target)) as conn:
             self.assertEqual(conn.execute('PRAGMA journal_mode').fetchone()[0], 'delete')
-            self.assertEqual(conn.execute('SELECT COUNT(*) FROM schema_meta').fetchone()[0], 7)
+            self.assertEqual(conn.execute('SELECT COUNT(*) FROM schema_meta').fetchone()[0], 9)
             self.assertIsNotNone(conn.execute("SELECT 1 FROM sqlite_master WHERE name='eligibility_settlement_insert_guard'").fetchone())
 
     def test_paths_spaces_different_cwd_cli(self):
@@ -212,7 +212,7 @@ class BootstrapTests(unittest.TestCase):
         result = subprocess.run([sys.executable, '-B', str(ROOT / 'verify_production_candidate.py'), '--db', str(self.target), '--receiver'],
                                 cwd=self.root, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn('scripts: 21 failures: 0', result.stdout)
+        self.assertIn('scripts: 23 failures: 0', result.stdout)
         self.assertIn('isolated_database_integrity: ok', result.stdout)
         self.assertEqual(before, self.target.read_bytes())
 
@@ -277,7 +277,7 @@ class BootstrapTests(unittest.TestCase):
                                  '--db', str(self.target), '--receiver'],
                                 cwd=self.root, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn('scripts: 21 failures: 0', result.stdout)
+        self.assertIn('scripts: 23 failures: 0', result.stdout)
         self.assertFalse((source_copy / 'data').exists())
         self.assertEqual(before, self.target.read_bytes())
 
@@ -291,7 +291,7 @@ class BootstrapTests(unittest.TestCase):
         # Isolate the verifier's exit behavior from individual fixture scripts.
         # Its input remains a temporary database; nested scripts are stubbed.
         with patch.object(sys, 'argv', ['verify_production_candidate.py', '--db', str(self.target)]), \
-             patch.object(runpy, 'run_path', return_value={}), redirect_stdout(output), \
+             patch.object(runpy, 'run_path', return_value={}), patch.object(bootstrap, 'validate_database', return_value=None), redirect_stdout(output), \
              patch.object(socket, 'create_connection'), patch.object(socket.socket, 'connect'), \
              patch.object(socket.socket, 'connect_ex'), patch.object(socket, 'getaddrinfo'):
             try:
