@@ -1,6 +1,30 @@
 # Canonical runtime procedure
 
-Run from `C:\Users\User\triage_engine`. The receiver reads process environment variables; it does not auto-load `.env`. Use a protected service configuration or local secret manager; do not put secret values on a command line. `.env.example` contains names and blank placeholders only. The receiver starts disabled unless explicitly configured. Live capture defaults off independently.
+Run from the checkout root. The receiver reads process environment variables; it does not auto-load `.env`. Use a protected service configuration or local secret manager; do not put secret values on a command line. `.env.example` contains names and blank placeholders only. The receiver starts disabled unless explicitly configured. Live capture defaults off independently.
+
+## Fresh checkout: Canonical Bootstrap V1
+
+Create the virtual environment and install only declared canonical runtime dependencies:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\python.exe -m pip install -r requirements-canonical-runtime.txt
+.\venv\Scripts\python.exe canonical_bootstrap.py
+.\venv\Scripts\python.exe -B test_canonical_bootstrap.py
+.\venv\Scripts\python.exe verify_production_candidate.py --receiver
+```
+
+Bootstrap defaults to this checkout's `data/settlement.db`, independently of the current working directory. An explicit `--db <path>` selects another database; pass the same path to the verifier. Missing parent directories are created. No historical database, `.env`, provider credentials or principal secrets are required. Bootstrap performs no network or financial operations and does not enable capture or the receiver.
+
+The substrate owner remains `db.init_db()`. Bootstrap uses a fixed ordered registry of migrations 001–008; it never executes the divergent legacy `schema.sql`. Migration 007 remains an explicitly verified, historically unregistered schema helper. Expected metadata versions are 1–6 and 8; bootstrap does not fabricate a version-7 application timestamp.
+
+A missing database is built privately on the target filesystem, checked against a fresh committed-schema reference, checked for integrity/FKs and empty evidence/economic tables, then checkpointed and published without overwriting any target. Publication requires filesystem hard-link support (supported by the intended local NTFS deployment); unsupported filesystems fail closed. Failed construction removes only bootstrap-owned temporary files and leaves no published partial database. This is atomic publication, not a transaction spanning the independently committing migrations. Concurrent publication cannot replace another process's target.
+
+A current database is validated read-only and left unchanged, including historical rows, metadata and capture claims. Partial, older, future or conflicting schemas are rejected for separate human-reviewed upgrade; bootstrap never upgrades a historical database automatically. Exact committed schema definitions are required, including indexes and triggers; additional schema objects also require review. Use bootstrap in a dedicated process because the existing components use process-local database bindings.
+
+Verification copies the selected existing database into an independent temporary directory, redirects approved fixtures requesting checkout `data/` into that same isolated run, blocks application network access and runs the approved canonical script list. It never bootstraps its input. Integrity or foreign-key failures cause a failing exit status. Many individual regression scripts create their own isolated fixtures; fresh construction itself is covered separately by `test_canonical_bootstrap.py`. `verify_canonical_suite.py` is an empty-state diagnostic, not a readiness gate for databases containing legitimate economic history. Do not use unrestricted test discovery or genuine/manual provider scripts.
+
+The local receiver-process smoke procedure below is a separate deployment check with existing local virtual-environment assumptions, not a bootstrap prerequisite. Dependency locking and general portability/legacy cleanup are outside Bootstrap V1.
 
 Before startup, stop legacy services, back up `data/settlement.db` using SQLite's backup API (including active WAL state), restrict file permissions to authorized actors, preserve historical evidence, and run:
 
